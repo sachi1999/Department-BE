@@ -27,17 +27,6 @@ public class AuthController {
 	@Autowired
 	private UserDetailsRepository userDetailsRepository;
 	
-	/*
-	 * @ResponseBody
-	 * 
-	 * @RequestMapping("getUseremailIdandpwd.do") public List<Object> getUserDetail
-	 * (@RequestBody UserDetail user) { List<Object> userDetail=
-	 * userDetailsRepository . getUseremailIdandpwd();
-	 * 
-	 * String hashedPwd = Hashing.sha256() .hashString(user.getPwd(),
-	 * StandardCharsets.UTF_8) .toString(); user.setPwd(hashedPwd); return
-	 * userDetail; }
-	 */
 	
 	@PostMapping("Login")
 	public LoginResponse login(@RequestBody LoginRequest Login )
@@ -72,9 +61,5 @@ public class AuthController {
 		
 		
 	}
-
-	
-	
-	
 
 }

@@ -13,5 +13,4 @@ import net.store.api.model.UserDetail;
 public interface UserDetailsRepository  extends JpaRepository<UserDetail, Long>  {	  
 	  @Query("SELECT u FROM UserDetail u WHERE u.emailId = ?1")
 	    UserDetail UserDetail(String emailId);
-	  
 }
