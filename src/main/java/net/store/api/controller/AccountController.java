@@ -34,6 +34,11 @@ public class AccountController {
 	@PostMapping("Register")
 	public UserDetail createUser(@RequestBody UserDetail user)
 	{
+		
+		if(userDetailsRepository.findByEmailIdIgnoreCase(user.getEmailId()) != null) {
+			return null;
+		}
+		
 		String hashedPwd = Hashing.sha256()
 		        .hashString(user.getPwd(), StandardCharsets.UTF_8)
 		        .toString();
