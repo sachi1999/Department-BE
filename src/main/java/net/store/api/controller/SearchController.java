@@ -22,9 +22,9 @@ import net.store.api.model.UserDetail;
 import net.store.api.repository.SearchRepository;
 import net.store.api.repository.UserDetailsRepository;
 
-@RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/v1/search")
-@CrossOrigin(origins = "*")
+@RestController
 public class SearchController {
 	
 	@Autowired
