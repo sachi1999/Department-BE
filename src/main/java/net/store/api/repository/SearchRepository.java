@@ -11,7 +11,6 @@ import net.store.api.model.Product;
 @Repository
 public interface SearchRepository extends JpaRepository<Product, Long>{
 	 List<Product> findByCategoryIgnoreCase(String catergory);
-
 }
 
 
