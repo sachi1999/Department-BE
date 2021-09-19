@@ -34,7 +34,7 @@ public class SearchController {
 	@RequestMapping(value = "/catergory", method = RequestMethod.GET)
 	public List<Product> GetProductsByCategory(@RequestParam(value = "catergory") String category)
 	{
-		List<Product> list  = searchepository.GetProductsByCategory(category);
+		List<Product> list  = searchepository.findByCategoryIgnoreCase(category);
 	    return list;
 	}
 	

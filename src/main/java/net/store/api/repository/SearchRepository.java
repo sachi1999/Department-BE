@@ -10,8 +10,7 @@ import net.store.api.model.Product;
 
 @Repository
 public interface SearchRepository extends JpaRepository<Product, Long>{
-	 @Query("SELECT p FROM Product p WHERE p.category = ?1")
-	 List<Product> GetProductsByCategory(String catergory);
+	 List<Product> findByCategoryIgnoreCase(String catergory);
 
 }
 

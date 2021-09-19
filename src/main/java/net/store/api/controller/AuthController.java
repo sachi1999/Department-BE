@@ -37,7 +37,7 @@ public class AuthController {
 		        .hashString(Login.getPwd(), StandardCharsets.UTF_8)
 		        .toString();	
 		
-		UserDetail user =  userDetailsRepository.UserDetail(Login.getEmailId());
+		UserDetail user =  userDetailsRepository.findByEmailIdIgnoreCase(Login.getEmailId());
 		
 		if (user == null)
 		{
