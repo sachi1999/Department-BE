@@ -67,7 +67,7 @@ public class ShoppingCartController {
 			ShoppingCart toUpdatCart = null;
 			for (int i = 0; i < list.size(); i++) {
 				ShoppingCart s = list.get(i);
-				if (cart.getProductId() == s.getProductId()) {
+				if (cart.getProductId().equals(s.getProductId())) {
 					toUpdatCart = new ShoppingCart();
 					toUpdatCart = cart;
 					toUpdatCart.setId(s.getId());
